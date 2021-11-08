@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mango</title>
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,19 +22,38 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/main.css">
+
 </head>
 
 <body>
-    <div class="info">
-        <h2>This is MANGO</h2>
-        <p>MANGO DESIGN and 850+ brands</p>
-        <div class="info__btn">
-            <button><a href="./index.html">shop woman</a></button>
-            <button><a href="#">shop man</a></button>
-        </div>
-
+    <!-- components -->
+    <div>
+        <div id="header"></div>
+        <div id="signIn"></div>
+        <div id="catalog"></div>
+        <div id="bag"></div>
+        <div id="search"></div>
     </div>
+
+    <!-- constants and utils -->
+    <script src="./constants/catalog.js"></script>
+    <script src="./constants/root.js"></script>
+    <script src="./utils/localStorageUtils.js"></script>
+
+    <!-- header -->
+    <script src="./components/header/header.js"></script>
+    <link rel="stylesheet" href="./components/header/header.css">
+
+    <!-- search -->
+    <script src="./components/search/search.js"></script>
+    <link rel="stylesheet" href="./components/search/search.css">
+
+    <!-- bag -->
+    <script src="./components/bag/bag.js"></script>
+    <link rel="stylesheet" href="./components/bag/bag.css">
+
+    
+    <script src="./index.js"></script>
 </body>
 
 </html>
