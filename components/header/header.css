@@ -1,0 +1,61 @@
+.header__container{
+    margin-top: 10px;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ul {
+    display: flex;
+}
+.ul li {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.ul li:first-child {
+    margin-left: 0;
+}
+.logo {
+font-size: 2rem;
+cursor: pointer;
+}
+.icons {
+    display: flex;
+}
+
+.icons div {
+    margin-left: 25px;
+    cursor: pointer;
+
+}
+
+.icons div:first-child {
+    margin-left: 0;
+}
+.icons p {
+    display: flex;
+    justify-content: center;
+}
+.bag {
+    position: relative;
+}
+.basket-radius {
+    width: 15px;
+    height: 15px;
+    background: #d25353f1;
+    border-radius: 100%;
+    position: absolute;
+    top: -3px;
+    right: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+

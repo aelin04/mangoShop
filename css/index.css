@@ -1,0 +1,30 @@
+:root {
+    /* fonts */
+    --main-font : 'Playfair Display', serif;
+
+    /* background */
+    --main-background: #ffffff;
+
+    /* color-text */
+    --color-white: #fff;
+    --color-black: #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: var(--main-font);
+}
+body {
+    background: var(--main-background);
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,22 @@
+.search input {
+    width: 300px;
+    background: var(--main-background);
+    position: fixed;
+    top: 60px;
+    left: 940px;
+    padding: 7px 15px;
+    border-radius: 50px;
+    border: 1px solid rgb(146, 146, 146);
+    font-size: 1.2rem;
+    font-family: var(--main-font);
+    z-index: 1000;
+    cursor: pointer;
+}
+.search input:hover {
+    background: rgb(231, 231, 231);
+    transition: 1s ease-in-out;
+}
+.search input:hover::placeholder {
+    color: var(--color-black);
+    transition: 1s ease-in-out;
+}

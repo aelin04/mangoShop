@@ -1,0 +1,84 @@
+body {
+    overflow-x: hidden;
+    background-image: url(../img/mainimg/zhangzui-CWyGHLQOV9k-unsplash.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-white);
+    outline: none;
+    text-decoration: none;
+}
+
+.info {
+    top: 40%;
+    left: 35%;
+    position: absolute;
+    margin: -125px 0 0 -125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.info a{
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.info h2 {
+    font-size: 3.2rem;
+}
+
+.info p {
+    padding-top: 20px;
+    font-size: 1.3rem;
+}
+
+.info__btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.info button {
+    margin-top: 50px;
+    /* margin-right: 10px; */
+    font-size: 2rem;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+.info button:last-child {
+    margin-top: 30px;
+}
+
+.info button:hover {
+    background: rgb(206, 206, 206);
+    transition: 0.8s ease-in-out;
+}
+
+@media all and (min-width: 768px) {
+    body {
+        background-image: url(../img/mainimg/microsoftteams-image-\(10\).webp);
+    }
+    .info {
+        top: 45%;
+        left: 45%;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .info__btn {
+        display: block;
+    }
+    .info button {
+        margin-right: 10px;
+    }
+    .info button:last-child {
+        margin-right: 0;
+    }
+}
