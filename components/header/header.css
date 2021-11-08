@@ -1,25 +1,19 @@
-.header__container{
+.header__container {
     margin-top: 10px;
-}
-.nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.ul {
-    display: flex;
-}
-.ul li {
-    margin-left: 20px;
+
+.logo {
+    font-size: 1.5rem;
     cursor: pointer;
 }
-.ul li:first-child {
-    margin-left: 0;
+
+.search {
+    display: none;
 }
-.logo {
-font-size: 2rem;
-cursor: pointer;
-}
+
 .icons {
     display: flex;
 }
@@ -27,19 +21,21 @@ cursor: pointer;
 .icons div {
     margin-left: 25px;
     cursor: pointer;
-
 }
 
 .icons div:first-child {
     margin-left: 0;
 }
+
 .icons p {
     display: flex;
     justify-content: center;
 }
+
 .bag {
     position: relative;
 }
+
 .basket-radius {
     width: 15px;
     height: 15px;
@@ -58,4 +54,79 @@ cursor: pointer;
     cursor: pointer;
 }
 
+@media all and (min-width: 768px) {
+    .menu__list {
+        display: block;
+        display: flex;
+    }
+    .menu__list li {
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    .menu__list li:first-child {
+        margin-left: 0;
+    }
+    .menu {
+        display: none;
+    }
+    .logo {
+        font-size: 2rem;
+    }
+    .search {
+        display: block;
+    }
+}
 
+@media all and (max-width: 768px) {
+    .menu {
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .menu span, .menu::before, .menu::after {
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #000;
+    }
+    .menu::before, .menu::after {
+        content: "";
+    }
+    .menu::before {
+        top: 0;
+    }
+    .menu::after {
+        bottom: 0;
+    }
+    .menu span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    .menu__body {
+        border-top: 1px solid #000;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.815);
+        padding: 30px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+    }
+    .menu__body._active {
+        left: 0;
+    }
+    .menu__list li {
+        font-size: 1.5rem;
+        margin: 0px 0px 30px 0px;
+    }
+    .menu__list li:last-child {
+        margin-bottom: 0;
+    }
+}

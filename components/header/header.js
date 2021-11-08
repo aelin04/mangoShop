@@ -2,20 +2,35 @@ class Header {
     // handleBagOpenPage(){
     //     bagPage.render()
     // }
-
+    // handleMenuOpenPage() {
+    //     menuOpen.render()
+    // }
     handleSearchOpenPage() {
         searchModal.render()
     }
 
     render(counter) {
+        const iconMenu = document.querySelector('.menu')
+        const menuBody = document.querySelector('.menu__body')
+        if (iconMenu) {
+            iconMenu.addEventListener('click', (e) => {
+                iconMenu.classList.toggle('_active')
+                menuBody.classList.toggle('_active')
+            })
+        }
         const html = `
         <div class="header__container">
-            <nav class="nav">
-                <ul class="ul">
+            
+            <div class="menu">
+                <span></span>
+                </div>
+                <nav class="menu__body">
+                <ul class="menu__list">
                     <li>Женская</li>
                     <li>Мужская</li>
                     <li>Детская</li>
                 </ul>
+                </nav>
             <div class="logo">
                 <h3>MANGO</h3>
             </div>
@@ -36,7 +51,7 @@ class Header {
               </div>
                 </div>
             </div>
-            </nav>
+           
         </div>
         `
         ROOT_HEADER.innerHTML = html

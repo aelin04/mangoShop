@@ -44,7 +44,7 @@ body {
 .info button {
     color: var(--color-black);
     background: var(--main-background);
-    margin-top: 50px;
+    margin-top: 70px;
     /* margin-right: 10px; */
     font-size: 2rem;
     text-transform: uppercase;
