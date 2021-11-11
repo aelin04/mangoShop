@@ -4,6 +4,7 @@ function render () {
     headerPage.render(productsStore.length)
 
     productsPage.render()
+   
 }
 
 render()

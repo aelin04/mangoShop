@@ -5,6 +5,11 @@
     align-items: center;
 }
 
+a {
+    outline: none;
+    color: var(--color-black);
+}
+
 .logo {
     font-size: 1.5rem;
     cursor: pointer;
@@ -121,6 +126,18 @@
     }
     .menu__body._active {
         left: 0;
+    }
+    .menu._active span {
+        visibility: hidden;
+        transform: scale() translate(0px, -50%);
+    }
+    .menu._active::before {
+        top: 45%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .menu._active::after {
+        bottom: 45%;
+        transform: rotate(45deg) translate(0px, -50%);
     }
     .menu__list li {
         font-size: 1.5rem;

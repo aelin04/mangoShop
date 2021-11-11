@@ -1,38 +1,41 @@
 class Header {
-    // handleBagOpenPage(){
-    //     bagPage.render()
-    // }
-    // handleMenuOpenPage() {
-    //     menuOpen.render()
-    // }
+    handleBagOpenPage(){
+        bagPage.render(productsStore.length)
+    }
+    constructor() {
+        this.classNameActive = '_active'
+    }
+    handleMenuOpenPage(element){
+            element.classList.add(this.classNameActive)
+            // menuOpen.render()
+    }
+
+    handleMenuClosePage (element) {
+        element.classList.remove(this.classNameActive)
+
+    }
     handleSearchOpenPage() {
         searchModal.render()
     }
 
     render(counter) {
-        const iconMenu = document.querySelector('.menu')
-        const menuBody = document.querySelector('.menu__body')
-        if (iconMenu) {
-            iconMenu.addEventListener('click', (e) => {
-                iconMenu.classList.toggle('_active')
-                menuBody.classList.toggle('_active')
-            })
-        }
+        let activeClass = " " + this.classNameActive
+
         const html = `
         <div class="header__container">
             
-            <div class="menu">
+            <div class="menu" onclick="headerPage.handleMenuOpenPage(this)">
                 <span></span>
                 </div>
                 <nav class="menu__body">
                 <ul class="menu__list">
-                    <li>Женская</li>
-                    <li>Мужская</li>
+                    <li><a href="./woman.html">Женская</a></li>
+                    <li><a href="./man.html">Мужская</a></li>
                     <li>Детская</li>
                 </ul>
                 </nav>
             <div class="logo">
-                <h3>MANGO</h3>
+                <h3><a href="./index.html">MANGO</a></h3>
             </div>
             <div class="icons">
                 <div class="search" onclick="headerPage.handleSearchOpenPage()">
@@ -41,7 +44,7 @@ class Header {
                 </div>
                 <div class="signIn">
                 <p><i class="fal fa-user"></i></p>
-                    <a href="./components/signIn/signIn.js">Вход</a>
+                <span>Вход</span>
                 </div>
                 <div class="bag" onclick="headerPage.handleBagOpenPage()">
                 <p><i class="fal fa-shopping-bag"></i></p>
