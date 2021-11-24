@@ -4,7 +4,7 @@
     grid-gap: 45px;
     width: 80%;
     max-width: 1200px;
-    margin: 30px auto;
+    margin: 80px auto;
 }
 
 .products__element {
@@ -14,14 +14,16 @@
     transition:  1s all ease-in-out;
 }
 .products__element:hover {
-    transform: translateY(3px);
+    transform: scale(1.05);
 }
 
 .products__element--img {
+    position: relative;
     width: 100%;
     object-fit: contain; 
 }
 
+.overlay
 .products__element--name {
     font-family: var(--main-fonts-hind);
     color: var(--color-main-text);

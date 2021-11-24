@@ -1,13 +1,23 @@
 class Search {
-    handleSearchClose(){
+    handleSearchClose() {
         ROOT_SEARCH.innerHTML = ''
+
+    }
+
+    inp(element) {
+        const newObj = CATALOG.filter(item => {
+            if (item.type == "man") {
+                return item.name.toLowerCase().includes(element.value.toLowerCase())
+            }
+        })
+        productsPage.value(newObj)
     }
 
     render() {
         const html = `
         <div class="mmm">
     <div class="search">
-    <input type="text" placeholder="Искать в Mango...">
+    <input type="text" placeholder="Искать в Mango..." onChange="searchModal.inp(this)">
     
     </div>
     <img width=20 src="./img/icon/close.png" onclick="searchModal.handleSearchClose()">
@@ -17,5 +27,4 @@ class Search {
         ROOT_SEARCH.innerHTML = html
     }
 }
-
 const searchModal = new Search()

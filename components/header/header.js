@@ -1,5 +1,6 @@
 class Header {
     handleBagOpenPage(){
+        const productsStore = localStorageUtil.getProducts()
         bagPage.render(productsStore.length)
     }
     constructor() {
@@ -24,16 +25,7 @@ class Header {
         const html = `
         <div class="header__container">
             
-            <div class="menu" onclick="headerPage.handleMenuOpenPage(this)">
-                <span></span>
-                </div>
-                <nav class="menu__body">
-                <ul class="menu__list">
-                    <li><a href="./woman.html">Женская</a></li>
-                    <li><a href="./man.html">Мужская</a></li>
-                    <li>Детская</li>
-                </ul>
-                </nav>
+            
             <div class="logo">
                 <h3><a href="./index.html">MANGO</a></h3>
             </div>
@@ -61,4 +53,3 @@ class Header {
     }
 }
 const headerPage = new Header()
-const productsStore = localStorageUtil.getProducts()

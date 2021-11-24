@@ -1,10 +1,9 @@
-
 .search input {
     max-width: 300px;
     width: 100%;
     background: var(--main-background);
-    position: absolute;
-    top: 7%;
+    position: fixed;
+    top: 8%;
     left: 60%;
     padding: 7px 15px;
     border-radius: 50px;
@@ -23,7 +22,28 @@
     transition: 1s ease-in-out;
 }
 .mmm img {
-    position: absolute;
-    top: 7%;
-    left: 82%;
+    position: fixed;
+    top: 8%;
+    left: 81%;
+}
+
+@media all and (max-width: 1024px) {
+    .search input {
+        top: 9%;
+    }
+    .mmm img {
+        left: 90%;
+    }
+
+}
+
+@media all and (max-width: 800px) {
+    .mmm img {
+        left: 88%;
+        top: 11%;
+    }
+    .search input {
+        top: 12%;
+        left: 50%;
+    }
 }

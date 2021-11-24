@@ -4,6 +4,8 @@ class Bag {
         ROOT_BAG.innerHTML = ''
     }
 
+   
+
     render(counter) {
         const productsStore = localStorageUtil.getProducts()
         let htmlCatalog = ''
@@ -12,7 +14,7 @@ class Bag {
         
 
         CATALOG.forEach(({id, name, img, price }) => {
-            if (productsStore.indexOf(id) !== -1) {
+            if (productsStore.indexOf(id) !== -1 ) {
                 htmlCatalog += `
                 <tr>
                 <td class="shopping__element--img"><img src="${img}"></td>

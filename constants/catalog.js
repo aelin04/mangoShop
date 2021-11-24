@@ -83,4 +83,46 @@ const CATALOG = [
         img: "./img/mainimg/jeans.webp",
         price: 29900
     },
+    {
+        id: "el13",
+        name: "Верхняя рубашка в гусиную лапку",
+        type: "man",
+        img: "./img/mainimg/man1.webp",
+        price: 5990
+    },
+    {
+        id: "el14",
+        name: "Непромокаемое пальто из шерсти",
+        type: "man",
+        img: "./img/mainimg/man2webp.webp",
+        price: 5990
+    },
+    {
+        id: "el15",
+        name: "Хлопковый свитшот с молнией",
+        type: "man",
+        img: "./img/mainimg/man3.webp",
+        price: 5990
+    },
+    {
+        id: "el16",
+        name: "Ботинки челси из замши",
+        type: "man",
+        img: "./img/mainimg/man4.webp",
+        price: 5990
+    },
+    {
+        id: "el17",
+        name: "Полушерстяная бейсболка",
+        type: "man",
+        img: "./img/mainimg/man5.webp",
+        price: 5990
+    },
+    {
+        id: "el18",
+        name: "Спортивная поясная сумка многофункциональная",
+        type: "man",
+        img: "./img/mainimg/man6.webp",
+        price: 5990
+    },
 ]

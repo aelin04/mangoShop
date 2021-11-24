@@ -28,3 +28,28 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+.header {
+    top: 0;
+    margin: 0 auto;
+    padding: 10px 0;
+    max-width: 2560px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 10000;
+}
+.header__menu {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.header.active {
+    background: rgb(216, 214, 214);
+    top: 0;
+}

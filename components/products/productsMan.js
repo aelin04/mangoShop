@@ -17,18 +17,16 @@ class Products {
         }
 
         headerPage.render(products.length)
+   
     }
 
-    value(element) {
-      const  newObj =  [...element]
-      return newObj
-    }
+    
     render() {
         const productsStore = localStorageUtil.getProducts()
         let htmlCatalog = ''
-
+        
         CATALOG.forEach(({ id, name, img, price , type }) => {
-            if (type === "woman") {
+            if (type == "man" ) {
             let activeClass = ''
             let activeText = ''
             if (productsStore.indexOf(id) === -1) {
@@ -39,12 +37,12 @@ class Products {
             }
 
             htmlCatalog += `
-            <li class="products__element"  >
+            <li class="products__element">
                <img class="products__element--img" src="${img}"/>
              <h4 class="products__element--name">${name}</h4>
              <div class="products__element--footer">
               <p class="products__element--price">${price.toLocaleString()} сом.</p>
-              <button 
+              <button
               class="products__element--btn"
               onclick="productsPage.handleLocalStore(this, '${id}')"
               >${activeText}</button>

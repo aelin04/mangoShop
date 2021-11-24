@@ -21,6 +21,7 @@
     <link rel="shortcut icon" href="./img/icon/m_4457.ico" type="image/x-icon">
 
     <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/index.css">
 
 </head>
@@ -28,15 +29,31 @@
 <body>
     <!-- components -->
     <div>
-        <div id="header"></div>
+        <div class="header">
+            <div class="header__menu">
+                <div class="menu" onclick="headerPage.handleMenuOpenPage(this)">
+                    <span></span>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li><a href="./woman.html">Женская</a></li>
+                        <li><a href="./man.html">Мужская</a></li>
+                        <li>Детская</li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="header"></div>
+        </div>
         <div id="signIn"></div>
         <div id="bag"></div>
         <div id="search"></div>
-        <div id="products"></div>
+        <div id="slides"></div>
+        <div id="products"  ></div>
+        <div id="footer"></div>
     </div>
 
     <!-- constants and utils -->
-    <script src="./constants/catalogMan.js"></script>
+    <script src="./constants/catalog.js"></script>
     <script src="./constants/root.js"></script>
     <script src="./utils/localStorageUtils.js"></script>
 
@@ -53,10 +70,16 @@
     <script src="./components/bag/bag.js"></script>
     <link rel="stylesheet" href="./components/bag/bag.css">
 
+    <!-- slides -->
+    <script src="./components/slides/slidesman.js"></script>
+    <link rel="stylesheet" href="./components/slides/slidesMan.css">
     <!-- products -->
-    <script src="./components/products/products.js"></script>
+    <script src="./components/products/productsMan.js"></script>
     <link rel="stylesheet" href="./components/products/products.css">
-
+    <!-- footer -->
+    <script src="./components/footer/footer.js"></script>
+    <link rel="stylesheet" href="./components/footer/footer.css">
+    
     <script src="./index.js"></script>
 </body>
 
