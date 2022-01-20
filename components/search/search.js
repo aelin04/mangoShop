@@ -10,7 +10,7 @@ class Search {
                 return item.name.toLowerCase().includes(element.value.toLowerCase())
             }
         })
-        productsPage.value(newObj)
+        console.log(newObj);
     }
 
     render() {

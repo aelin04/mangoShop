@@ -14,7 +14,7 @@
     transition:  1s all ease-in-out;
 }
 .products__element:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .products__element--img {
@@ -23,7 +23,6 @@
     object-fit: contain; 
 }
 
-.overlay
 .products__element--name {
     font-family: var(--main-fonts-hind);
     color: var(--color-main-text);
